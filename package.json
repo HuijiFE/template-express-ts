@@ -1,0 +1,42 @@
+{
+  "name": "template-express-ts",
+  "version": "1.0.0",
+  "description": "A template for express.js, based on typescript.",
+  "main": "index.js",
+  "scripts": {
+    "frame": "yarn || npm i",
+    "dev": "tsc && npm run start -- --watch && tsc -w",
+    "start": "pm2 start dist/server.js --name template-express-ts -f -x",
+    "stop": "pm2 stop template-express-ts --watch && pm2 delete template-express-ts && pm2 kill",
+    "tsc": "tsc",
+    "pm2": "pm2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/compression": "^0.0.36",
+    "@types/cors": "^2.8.3",
+    "@types/dotenv": "^4.0.2",
+    "@types/express": "^4.11.1",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^9.4.7",
+    "axios": "^0.18.0",
+    "compression": "^1.7.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "pm2": "^2.10.1",
+    "tslint": "^5.9.1",
+    "tslint-microsoft-contrib": "^5.0.3",
+    "typescript": "^2.7.2"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 5.0.0"
+  },
+  "alias": {
+    "@/*": "./src/*"
+  }
+}
