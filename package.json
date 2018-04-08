@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "frame": "yarn || npm i",
-    "dev": "tsc && npm run start -- --watch && tsc -w",
+    "dev": "tsc && npm run start -- --watch && tsc -w || npm run stop",
     "start": "pm2 start dist/server.js --name template-express-ts -f -x",
     "stop": "pm2 stop template-express-ts --watch && pm2 delete template-express-ts && pm2 kill",
     "tsc": "tsc",
@@ -34,7 +34,8 @@
   },
   "engines": {
     "node": ">= 8.0.0",
-    "npm": ">= 5.0.0"
+    "npm": ">= 5.0.0",
+    "yarn": ">= 1.5.0"
   },
   "alias": {
     "@/*": "./src/*"
